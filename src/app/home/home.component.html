@@ -1,0 +1,26 @@
+<div class="container color-dark">
+  <div class="col">
+    <p>Add A Blog Post</p>
+  </div>
+  <div class='col'>
+    <p>Blog Post</p>
+  </div>
+</div>
+
+<div class="container color-light">
+  <div class="col">
+    <p class='sm'>Input Blog Post Here</p>
+
+    <form>
+      <input type='text' class='txt' name='place' placeholder='Where did you go?' [(ngModel)]='placeText'>
+      <input type='text' class='txt' name='date' placeholder='Date Posted' [(ngModel)]='dateText'>
+      <textarea name="subject" placeholder="Write something.." style="height:200px" [(ngModel)]='postText'></textarea>
+      <input type='submit' class='btn' value='Add Post' (click)="addPost()">
+    </form>
+  </div>
+  <div class='col'>
+    <p class='post-container' *ngFor='let post of posts' >
+      {{ post }}
+    </p>
+  </div>
+</div>
