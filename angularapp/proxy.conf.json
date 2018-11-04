@@ -1,0 +1,6 @@
+{
+  "/travelblog": {
+    "target": "http://localhost3000",
+    "secure": false
+  }
+}
