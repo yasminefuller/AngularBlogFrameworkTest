@@ -8,10 +8,12 @@ import { DataService } from '../data.service';
 })
 export class HomeComponent implements OnInit {
 
-  placeText: string = [];
-  dateText: string = [];
-  postText: string = [];
+  placeText: string;
+  dateText: string;
+  postText: string;
   posts =[];
+
+  helloWorld: string = 'No Data';
 
   constructor(private _data: DataService) { }
 
@@ -19,6 +21,14 @@ export class HomeComponent implements OnInit {
     this._data.post.subscribe(res => this.posts = res);
     this._data.changePost(this.posts);
 
+  }
+
+  grabHelloWorld() {
+    this._data.getHelloWorld().subscribe(res => {
+      this.helloWorld = res['data'];
+      console.log("Received Response: ", res);
+    });
+    console.log("calling helloworld")
   }
 
     addPost() {
