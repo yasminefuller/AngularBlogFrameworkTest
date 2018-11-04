@@ -8,9 +8,9 @@ import { DataService } from '../data.service';
 })
 export class HomeComponent implements OnInit {
 
-  placeText: string = [];
-  dateText: string = [];
-  postText: string = [];
+  placeText: string;
+  dateText: string;
+  postText: string;
   posts =[];
 
   constructor(private _data: DataService) { }

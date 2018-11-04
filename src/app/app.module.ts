@@ -16,7 +16,7 @@ import { BlogpostComponent } from './blogpost/blogpost.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
     FormsModule
   ],
   providers: [DataService],
