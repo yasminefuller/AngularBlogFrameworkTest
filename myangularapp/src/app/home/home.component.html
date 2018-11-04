@@ -12,7 +12,7 @@
     <p class='sm'>Input Blog Post Here</p>
     <input type='text' [(ngModel)]='helloWorld'>
     <input value="Hello World" type="button" (click)='grabHelloWorld()'>
-
+    <input type="text" [(ngModel)]="helloWorldData"><input value="Send" type="button" (click)="postHelloWorld()">
     <form>
       <input type='text' class='txt' name='place' placeholder='Where did you go?' [(ngModel)]='placeText'>
       <input type='text' class='txt' name='date' placeholder='Date Posted' [(ngModel)]='dateText'>

@@ -19,4 +19,12 @@ export class DataService {
     return this.http.get('/helloworld');
   }
 
+  postHelloWorld(helloWorldData) {
+    return this.http.post('/api/helloworld', {'data':helloWorldData});
+  }
+
+  collectHelloWorld() {
+    return this.http.get('/api/helloworld');
+  }
+
 }

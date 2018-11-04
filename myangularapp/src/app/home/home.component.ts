@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   posts =[];
 
   helloWorld: string = 'No Data';
+  helloWorldData: string;
 
   constructor(private _data: DataService) { }
 
@@ -29,6 +30,17 @@ export class HomeComponent implements OnInit {
       console.log("Received Response: ", res);
     });
     console.log("calling helloworld")
+  }
+
+  postHelloWorld() {
+    this._data.postHelloWorld(this.helloWorldData).subscribe(res => {
+      this.helloWorldData = '';
+      this.collectHelloWorld();
+    })
+  }
+
+  collectHelloWorld() {
+    this._data.collectHelloWorld().subscribe(res => console.log(res));
   }
 
     addPost() {
